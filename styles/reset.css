@@ -1,0 +1,68 @@
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    line-height: 1;
+}
+
+
+button, input, select, textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+button, input {
+    overflow: visible;
+}
+
+
+button, select {
+    text-transform: none;
+}
+
+
+textarea {
+    overflow: auto;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+
+[hidden] {
+    display: none;
+}
+
+

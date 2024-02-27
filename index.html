@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    <header>
+        <h1>Renzo B. Alvarado</h1>
+        <h3>Mi Pagina Web</h3>
+    </header>
+    <div id="container-who">
+        <h3>¿Quién soy?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste nisi illo odit numquam voluptatem, hic cupiditate ipsam dolore quam natus sint architecto tempore, enim accusantium labore dignissimos tempora expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste nisi illo odit numquam voluptatem, hic cupiditate ipsam dolore quam natus sint architecto tempore, enim accusantium labore dignissimos tempora expedita.</p>
+    </div>
+    <div id="container-tec">
+        <section>
+            <div>
+                <h3>Mis tecnologías Favoritas</h3>
+                <div id="container-tec-fav">
+                    <div class="container-fav">
+                        <p>HTML</p>
+                        <div class="container-img">
+                            <img src="./assets/img/HTML.png" alt="kotlin">
+                        </div>
+                    </div>
+                    <div class="container-fav">
+                        <p>JAVASCRIPT</p>
+                        <div class="container-img">
+                            <img src="./assets/img/js.png" alt="kotlin">
+                        </div>
+                    </div>
+                    <div class="container-fav">
+                        <p>CSS</p>
+                        <div class="container-img">
+                            <img src="./assets/img/css.png" alt="kotlin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="form">
+        <h3>Mis actividades favoritas</h3>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre de la Actividad" required>
+            </div>
+            <div class="form-group">
+                <textarea id="descripcion" name="descripcion" placeholder="Descripción de la Actividad" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="url" id="imagen" name="imagen" placeholder="Link de la Imagen" required>
+            </div>
+            <button type="submit">Agregar Actividad</button>
+        </form>
+    </div>
+
+    <div id="activitys">
+        <section>
+            <div>
+                <p>Sin actividades por el momento</p>
+            </div>
+        </section>
+    </div>
+    
 </body>
 </html>
