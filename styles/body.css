@@ -18,6 +18,8 @@
 
 #container-tec section div h3{
     text-align: center;
+    padding-top: 0%;
+    padding-bottom: 25px;
 }
 
 #container-tec-fav{

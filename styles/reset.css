@@ -1,68 +1,76 @@
+/* reset.css */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-    display: block;
+/* Ajuste de estilos de elementos básicos */
+
+/* Establecer márgenes y rellenos a cero */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
-}
-
-
-audio, canvas, progress, video {
-    display: inline-block;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
     vertical-align: baseline;
 }
 
-
-ul {
+/* Reiniciar el estilo de la lista */
+ol, ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
+/* Reiniciar el estilo del elemento de enlace */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+/* Reiniciar la disposición de la tabla */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
+/* Reiniciar el estilo del texto */
 body {
     line-height: 1;
 }
 
-
-button, input, select, textarea {
-    margin: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-
-button, input {
-    overflow: visible;
-}
-
-
-button, select {
-    text-transform: none;
-}
-
-
-textarea {
-    overflow: auto;
-}
-
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+/* Eliminar el espacio adicional en los elementos de bloque */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-
-[hidden] {
-    display: none;
+/* Establecer los elementos de imagen para que no rompan el flujo del texto */
+img {
+    max-width: 100%;
+    height: auto;
 }
+
+/* Establecer elementos de bloque para que no se redimensionen por defecto */
+embed, object, iframe {
+    max-width: 100%;
+}
+
+/* Evitar que los elementos en línea provoquen desbordamiento */
+pre {
+    white-space: pre-wrap; /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap; /* Opera <7 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* IE */
+}
+
 
 
