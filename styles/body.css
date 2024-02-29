@@ -30,6 +30,7 @@
 #container-tec-fav{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .container-fav{
@@ -38,10 +39,15 @@
     height: 250px;
     background-color: black;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .container-img img{
     width: 90%;
     height: 90%;
     border-radius: 8px;
+}
+
+.container-fav:hover{
+    transform: translateY(-15px);
 }

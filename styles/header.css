@@ -6,3 +6,10 @@ header {
 header h1, h3{
     padding: 10px;
 }
+
+header img{
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: gray;
+}

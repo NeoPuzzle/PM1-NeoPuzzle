@@ -10,20 +10,22 @@ class Activity {
 class Repository{
     constructor(){
         this.activities = [];
+        this.id = 0;
     }
 
     getAllActivities(){
         return this.activities
     }
 
-    createActivity(id, title, description, imgUrl){
-        const newActivity = new Activity(id, title, description, imgUrl);
+    createActivity(title, description, imgUrl){
+        this.id++;
+        const newActivity = new Activity(this.id, title, description, imgUrl);
+        console.log(newActivity);
         this.activities.push(newActivity);
-        //return newActivity
     }
 
     deleteActivity(id){
-        this.activities = this.activities.filter(activity => activity.id !== id);
+        this.activities = this.activities.filter((activity) => activity.id !== id);
     }
 }
 
@@ -31,13 +33,54 @@ class Repository{
 
 const repo = new Repository();
 
-repo.createActivity(1, "prueba 1", "probando 1", "https://prueba1");
-repo.createActivity(2, "prueba 2", "probando 2", "https://prueba2");
-repo.createActivity(3, "prueba 3", "probando 3", "https://prueba3");
-repo.createActivity(4, "prueba 4", "probando 4", "https://prueba4");
+const form = document.querySelector('form');
+const activities = document.getElementById('activities');
 
-console.log(repo.getAllActivities());
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-repo.deleteActivity(2);
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const imgUrl = document.getElementById('imgUrl').value;
+    
+    repo.createActivity(title,description,imgUrl);
 
-console.log(repo.getAllActivities());
+    activities.innerHTML = '';
+
+    repo.getAllActivities().forEach(activity => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+        <h3>${activity.title}</h3>
+        <p>${activity.description}</p>
+        <img src="${activity.imgUrl}" alt="${activity.title}">
+        `
+        activities.appendChild(card);
+        clear();
+        deleteActivityClickLonger(card);
+    });
+
+});
+
+function clear(){
+    title.value = "";
+    description.value = "";
+    imgUrl.value = "";
+}
+
+function deleteActivityClickLonger(card) {
+    let timeoutId;
+
+    card.addEventListener('mousedown', function (event) {
+        timeoutId = setTimeout(() => {
+            card.remove()
+            if(activities.children.length === 0){
+                activities.innerHTML =`<p>Sin actividades por el momento</p>`;
+            }
+        }, 1000);
+    });
+
+    card.addEventListener('mouseup', function (event) {
+        clearTimeout(timeoutId);
+    });
+}   

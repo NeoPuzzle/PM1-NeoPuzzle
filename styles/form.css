@@ -28,12 +28,14 @@ textarea {
     background-color: rgb(45, 44, 44);
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: white;
 }
 
 button {
     display: block;
     width: 200px;
     padding: 10px;
+    margin-bottom: 20px;
     background-color: rgb(45, 44, 44);
     color: #ffffff;
     border: none;

@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
+    <title>Blog Personal</title>
 </head>
 <body>
     <header>
+        <img src="./assets/img/miPhoto.png" alt="MiFoto">
         <h1>Renzo B. Alvarado</h1>
         <h3>Mi Pagina Web</h3>
     </header>
     <div id="container-who">
         <h3>¿Quién soy?</h3>
-        <p>Soy un profesional altamente motivado y orientado a resultados, con una sólida formación en el campo del desarrollo web. Poseo habilidades demostradas en como análisis de datos, gestión de proyectos, liderazgo de equipos. Mi enfoque proactivo y mi capacidad para adaptarme a entornos dinámicos me han permitido enfrentar desafíos de manera efectiva y alcanzar objetivos tanto a nivel individual como colaborativo.</p>
+        <p>Soy un profesional altamente motivado y orientado a resultados, con una sólida formación en el campo del desarrollo web. Poseo habilidades demostradas en análisis de datos, gestión de proyectos, liderazgo de equipos. Mi enfoque proactivo y mi capacidad para adaptarme a entornos dinámicos me han permitido enfrentar desafíos de manera efectiva y alcanzar objetivos tanto a nivel individual como colaborativo.</p>
     </div>
     <div id="container-tec">
         <section>
@@ -23,19 +24,19 @@
                     <div class="container-fav">
                         <p>HTML</p>
                         <div class="container-img">
-                            <img src="./assets/img/HTML.png" alt="kotlin">
+                            <img src="./assets/img/HTML.png" alt="HTML">
                         </div>
                     </div>
                     <div class="container-fav">
                         <p>JAVASCRIPT</p>
                         <div class="container-img">
-                            <img src="./assets/img/js.png" alt="kotlin">
+                            <img src="./assets/img/js.png" alt="JAVASCRIPT">
                         </div>
                     </div>
                     <div class="container-fav">
                         <p>CSS</p>
                         <div class="container-img">
-                            <img src="./assets/img/css.png" alt="kotlin">
+                            <img src="./assets/img/css.png" alt="CSS">
                         </div>
                     </div>
                 </div>
@@ -44,22 +45,24 @@
     </div>
 
     <div id="form">
-        <h3>Mis actividades favoritas</h3>
+        <section>
+            <h3>Mis actividades favoritas</h3>
         <form action="#" method="POST">
             <div class="form-group">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre de la Actividad" required>
+                <input type="text" id="title" name="title" placeholder="Nombre de la Actividad" required>
             </div>
             <div class="form-group">
-                <textarea id="descripcion" name="descripcion" placeholder="Descripción de la Actividad" rows="4" required></textarea>
+                <textarea id="description" name="description" placeholder="Descripción de la Actividad" rows="4" required></textarea>
             </div>
             <div class="form-group">
-                <input type="url" id="imagen" name="imagen" placeholder="Link de la Imagen" required>
+                <input type="url" id="imgUrl" name="imgUrl" placeholder="Link de la Imagen" required>
             </div>
             <button type="submit">Agregar Actividad</button>
         </form>
+        </section>
     </div>
 
-    <div id="activitys">
+    <div id="activities">
         <section>
             <div>
                 <p>Sin actividades por el momento</p>
@@ -70,5 +73,6 @@
     <script src="./scripts/index.js"></script>
     
 </body>
+
 
 </html>
