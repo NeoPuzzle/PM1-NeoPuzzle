@@ -1,3 +1,7 @@
+//const { Repository } = require('../scripts/models');
+//import { Repository } from '../scripts/models';
+
+
 class Activity {
     constructor(id, title, description, imgUrl){
         this.id = id;
@@ -28,7 +32,6 @@ class Repository{
         this.activities = this.activities.filter((activity) => activity.id !== id);
     }
 }
-
 
 
 const repo = new Repository();
@@ -83,4 +86,6 @@ function deleteActivityClickLonger(card) {
     card.addEventListener('mouseup', function (event) {
         clearTimeout(timeoutId);
     });
-}   
+};
+
+
